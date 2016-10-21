@@ -1,0 +1,170 @@
+{
+	"print": {
+		"prefix": "print",
+		"body": "li\t\t\\$v0, 1\t\t# system call #4 - print string\nla\t\t\\$a0, ${1:string}\nsyscall\t\t\t\t# execute",
+		"description": "print string",
+		"scope": "source.mips"
+	},
+	"addi": {
+		"prefix": "addi",
+		"body": "addi\t${1:\\$t0}, ${2:\\$t1}, ${3:0}\t\t\t# $1 = $2 + $3\n",
+		"description": "add immediate",
+		"scope": "source.mips"
+	},
+	"add": {
+		"prefix": "add",
+		"body": "add\t\t${1:\\$t0}, ${2:\\$t1}, ${3:\\$t2}\t\t# $1 = $2 + $3\n",
+		"description": "add",
+		"scope": "source.mips"
+	},
+	"beq": {
+		"prefix": "beq",
+		"body": "beq\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 == $2 then $3\n",
+		"description": "branch if equal",
+		"scope": "source.mips"
+	},
+	"bge": {
+		"prefix": "bge",
+		"body": "bge\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 >= $2 then $3\n",
+		"description": "branch if greater then or equal",
+		"scope": "source.mips"
+	},
+	"bgt": {
+		"prefix": "bgt",
+		"body": "bgt\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 > $2 then $3\n",
+		"description": "branch if greater then",
+		"scope": "source.mips"
+	},
+	"ble": {
+		"prefix": "ble",
+		"body": "ble\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 <= $2 then $3\n",
+		"description": "branch if less then or equal",
+		"scope": "source.mips"
+	},
+	"blt": {
+		"prefix": "blt",
+		"body": "blt\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 < $2 then $3\n",
+		"description": "branch if less then",
+		"scope": "source.mips"
+	},
+	"bne": {
+		"prefix": "bne",
+		"body": "bne\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 != $2 then $3\n",
+		"description": "branch if not equal",
+		"scope": "source.mips"
+	},
+	"b": {
+		"prefix": "b",
+		"body": "b\t\t${1:target}\t\t\t# branch to $1\n",
+		"description": "branch uncodnitional",
+		"scope": "source.mips"
+	},
+	"div": {
+		"prefix": "div",
+		"body": "div\t\t${1:\\$t0}, ${2:\\$t1}\t\t\t# $1 / $2\nmflo\t${3:\\$t2}\t\t\t\t\t# $3 = floor($1 / $2) \nmfhi\t${4:\\$t3}\t\t\t\t\t# $4 = $1 mod $2 \n",
+		"description": "divide",
+		"scope": "source.mips"
+	},
+	"jal": {
+		"prefix": "jal",
+		"body": "jal\t\t${1:target}\t\t\t\t# jump to $1 and save position to \\$ra\n",
+		"description": "jump and link",
+		"scope": "source.mips"
+	},
+	"jr": {
+		"prefix": "jr",
+		"body": "jr\t\t${1:\\$ra}\t\t\t\t\t# jump to $1\n",
+		"description": "jump register",
+		"scope": "source.mips"
+	},
+	"j": {
+		"prefix": "j",
+		"body": "j\t\t${1:target}\t\t\t\t# jump to $1\n",
+		"description": "jump",
+		"scope": "source.mips"
+	},
+	"la": {
+		"prefix": "la",
+		"body": "la\t\t${1:\\$t1}, ${2:var1}\t\t# \n",
+		"description": "load address",
+		"scope": "source.mips"
+	},
+	"lb": {
+		"prefix": "lb",
+		"body": "lb\t\t${1:\\$t1}, ${2:${3:0}(${4:\\$s1})}\t\t# \n",
+		"description": "load byte",
+		"scope": "source.mips"
+	},
+	"li": {
+		"prefix": "li",
+		"body": "li\t\t${1:\\$t1}, $2\t\t# $1 = $2\n",
+		"description": "load immediate",
+		"scope": "source.mips"
+	},
+	"lw": {
+		"prefix": "lw",
+		"body": "lw\t\t${1:\\$t1}, ${2:${3:0}(${4:\\$s1})}\t\t# \n",
+		"description": "load word",
+		"scope": "source.mips"
+	},
+	"move": {
+		"prefix": "move",
+		"body": "move \t${1:\\$t0}, ${2:\\$t1}\t\t# $1 = $2",
+		"description": "move",
+		"scope": "source.mips"
+	},
+	"mult": {
+		"prefix": "mult",
+		"body": "mult\t${1:\\$t0}, ${2:\\$t1}\t\t\t# $1 * $2 = Hi and Lo registers\nmflo\t${3:\\$t2}\t\t\t\t\t# copy Lo to $3\n",
+		"description": "multiply",
+		"scope": "source.mips"
+	},
+	"print1": {
+		"prefix": "print",
+		"body": "li\t\t\\$v0, 3\t\t# system call #3 - print double\nla\t\t\\$a0, ${1:variable}\nsyscall\t\t\t\t# execute",
+		"description": "print double",
+		"scope": "source.mips"
+	},
+	"print2": {
+		"prefix": "print",
+		"body": "li\t\t\\$v0, 2\t\t# system call #2 - print float\nla\t\t\\$a0, ${1:variable}\nsyscall\t\t\t\t# execute",
+		"description": "print float",
+		"scope": "source.mips"
+	},
+	"print3": {
+		"prefix": "print",
+		"body": "li\t\t\\$v0, 1\t\t# system call #1 - print int\nla\t\t\\$a0, ${1:variable}\nsyscall\t\t\t\t# execute",
+		"description": "print int",
+		"scope": "source.mips"
+	},
+	"sb": {
+		"prefix": "sb",
+		"body": "sb\t\t${1:\\$t1}, ${2:${3:0}(${4:\\$s1})}\t\t# \n",
+		"description": "store byte",
+		"scope": "source.mips"
+	},
+	"sw": {
+		"prefix": "sw",
+		"body": "sw\t\t${1:\\$t1}, ${2:${3:0}(${4:\\$s1})}\t\t# \n",
+		"description": "store word",
+		"scope": "source.mips"
+	},
+	"string": {
+		"prefix": "string",
+		"body": "${1:string}: .asciiz \"$2\"",
+		"description": "string var",
+		"scope": "source.mips"
+	},
+	"sub": {
+		"prefix": "sub",
+		"body": "sub\t\t${1:\\$t0}, ${2:\\$t1}, ${3:\\$t2}\t\t# $1 = $2 - $3\n",
+		"description": "substract",
+		"scope": "source.mips"
+	},
+	"var": {
+		"prefix": "var",
+		"body": "${1:var}: .${2:word} $3",
+		"description": "variable",
+		"scope": "source.mips"
+	}
+}
