@@ -1,7 +1,7 @@
 # MIPS Support
 
 ## Features
-This extension provides basic MIPS colorization and snippets support.
+This VSCode extension provides basic MIPS colorization and snippets support.
 
 ### Colors
 ![colors](images/vscode-mips-colors.png)
@@ -9,6 +9,7 @@ This extension provides basic MIPS colorization and snippets support.
 ### Snippets
 ![snippets](images/vscode-mips-snippets.png)
 
+The extension is based on Textmate's [MIPS bundle](https://github.com/textmate/mips.tmbundle)
 
 ## Release Notes
 
