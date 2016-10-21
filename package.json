@@ -1,27 +1,49 @@
 {
     "name": "mips",
     "displayName": "MIPS Support",
-    "description": "Provides basic syntax highlighting for MIPS assembly language",
+    "description": "Provides syntax highlighting and snippets for MIPS assembly language",
     "version": "0.0.1",
-    "publisher": "darkhan",
+    "publisher": "kdarkhan",
+    "homepage": "https://github.com/kdarkhan/vscode-mips-support",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kdarkhan/vscode-mips-support"
+    },
+    "bugs": {
+        "url": "https://github.com/kdarkhan/vscode-mips-support/issues",
+        "email": "darkhanu@gmail.com"
+    },
     "engines": {
         "vscode": "^1.5.0"
     },
     "categories": [
-        "Languages"
+        "Languages",
+        "Snippets"
     ],
     "contributes": {
-        "languages": [{
-            "id": "mips",
-            "aliases": ["MIPS Assembly", "mips"],
-            "extensions": [".s",".mips",".spim",".asm"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "mips",
-            "scopeName": "source.mips",
-            "path": "./syntaxes/mips.tmLanguage"
-        }],
+        "languages": [
+            {
+                "id": "mips",
+                "aliases": [
+                    "MIPS Assembly",
+                    "mips"
+                ],
+                "extensions": [
+                    ".s",
+                    ".mips",
+                    ".spim",
+                    ".asm"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mips",
+                "scopeName": "source.mips",
+                "path": "./syntaxes/mips.tmLanguage"
+            }
+        ],
         "snippets": [
             {
                 "language": "mips",
