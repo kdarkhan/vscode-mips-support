@@ -158,6 +158,39 @@
 		</dict>
 		<dict>
 			<key>begin</key>
+			<string>'</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.mips</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>'</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.mips</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.quoted.single.mips</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\[rnt\\"]</string>
+					<key>name</key>
+					<string>constant.character.escape.mips</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
 			<string>(^[ \t]+)?(?=#)</string>
 			<key>beginCaptures</key>
 			<dict>
