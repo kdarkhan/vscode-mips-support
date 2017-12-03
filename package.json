@@ -2,10 +2,10 @@
     "name": "mips",
     "displayName": "MIPS Support",
     "description": "Provides syntax highlighting and snippets for MIPS assembly language",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "kdarkhan",
     "homepage": "https://github.com/kdarkhan/vscode-mips-support",
-    "icon": "images/icon.svg",
+    "icon": "images/icon.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/kdarkhan/vscode-mips-support"

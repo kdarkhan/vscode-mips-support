@@ -13,6 +13,11 @@ The extension is based on Textmate's [MIPS bundle](https://github.com/textmate/m
 
 ## Release Notes
 
+### 0.0.2
+
+* Add syntax for singly-quoted characters
+* Switch svg logo to png
+
 ### 0.0.1
 
 Initial release
