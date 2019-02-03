@@ -161,6 +161,12 @@
 		"description": "substract",
 		"scope": "source.mips"
 	},
+	"subi": {
+		"prefix": "subi",
+		"body": "subi\t${1:\\$t0}, ${2:\\$t1}, ${3:0}\t\t\t# $1 = $2 - $3\n",
+		"description": "subtract immediate",
+		"scope": "source.mips"
+	},
 	"var": {
 		"prefix": "var",
 		"body": "${1:var}: .${2:word} $3",
