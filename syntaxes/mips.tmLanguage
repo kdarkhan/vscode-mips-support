@@ -37,7 +37,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\.(align|extern||globl)\b</string>
+			<string>\.(align|extern|globl)\b</string>
 			<key>name</key>
 			<string>storage.modifier.mips</string>
 		</dict>
