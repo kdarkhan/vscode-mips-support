@@ -13,6 +13,10 @@ The extension is based on Textmate's [MIPS bundle](https://github.com/textmate/m
 
 ## Release Notes
 
+### 0.0.4
+
+* Fix .globl highlighting
+
 ### 0.0.3
 
 * Add subi instruction
