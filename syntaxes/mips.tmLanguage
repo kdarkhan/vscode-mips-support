@@ -79,7 +79,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(\$)(zero|v[01]|a[0-3]|t[0-9]|s[0-7]|gp|sp|fp|ra)\b</string>
+			<string>(\$)(zero|v[01]|a[0-3]|t[0-9]|s[0-8]|gp|sp|fp|ra)\b</string>
 			<key>name</key>
 			<string>variable.other.register.usable.by-name.mips</string>
 		</dict>
