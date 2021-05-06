@@ -13,6 +13,10 @@ The extension is based on Textmate's [MIPS bundle](https://github.com/textmate/m
 
 ## Release Notes
 
+### 0.0.7
+
+* Add highlighting for `subi`
+
 ### 0.0.6
 
 * Syntax highlight $s8 register
