@@ -158,7 +158,7 @@
 	"sub": {
 		"prefix": "sub",
 		"body": "sub\t\t${1:\\$t0}, ${2:\\$t1}, ${3:\\$t2}\t\t# $1 = $2 - $3\n",
-		"description": "substract",
+		"description": "subtract",
 		"scope": "source.mips"
 	},
 	"subi": {

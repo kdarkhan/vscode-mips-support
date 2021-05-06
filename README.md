@@ -40,4 +40,4 @@ The extension is based on Textmate's [MIPS bundle](https://github.com/textmate/m
 
 ### 0.0.1
 
-Initial release
+* Initial release
