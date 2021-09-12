@@ -17,6 +17,18 @@
 		"description": "add",
 		"scope": "source.mips"
 	},
+	"and": {
+		"prefix": "and",
+		"body": "and\t\t${1:\\$t0}, ${2:\\$t1}, ${3:\\$t2}\t\t# $1 = $2 & $3\n",
+		"description": "and",
+		"scope": "source.mips"
+	},
+	"andi": {
+		"prefix": "andi",
+		"body": "andi\t${1:\\$t0}, ${2:\\$t1}, ${3:0}\t\t\t# $1 = $2 & $3\n",
+		"description": "and immediate",
+		"scope": "source.mips"
+	},
 	"beq": {
 		"prefix": "beq",
 		"body": "beq\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 == $2 then $3\n",
@@ -119,6 +131,24 @@
 		"description": "multiply",
 		"scope": "source.mips"
 	},
+	"nor": {
+		"prefix": "nor",
+		"body": "nor\t\t${1:\\$t0}, ${2:\\$t1}, ${3:\\$t2}\t\t# $1 = ~($2 | $3)\n",
+		"description": "nor",
+		"scope": "source.mips"
+	},
+	"or": {
+		"prefix": "or",
+		"body": "or\t\t${1:\\$t0}, ${2:\\$t1}, ${3:\\$t2}\t\t# $1 = $2 | $3\n",
+		"description": "or",
+		"scope": "source.mips"
+	},
+	"ori": {
+		"prefix": "ori",
+		"body": "ori\t\t${1:\\$t0}, ${2:\\$t1}, ${3:0}\t\t\t# $1 = $2 | $3\n",
+		"description": "or immediate",
+		"scope": "source.mips"
+	},
 	"print1": {
 		"prefix": "print",
 		"body": "li\t\t\\$v0, 3\t\t# system call #3 - print double\nla\t\t\\$a0, ${1:variable}\nsyscall\t\t\t\t# execute",
@@ -141,6 +171,18 @@
 		"prefix": "sb",
 		"body": "sb\t\t${1:\\$t1}, ${2:${3:0}(${4:\\$s1})}\t\t# \n",
 		"description": "store byte",
+		"scope": "source.mips"
+	},
+	"sll": {
+		"prefix": "sll",
+		"body": "sll\t\t${1:\\$t0}, ${2:\\$t1}, ${3:0}\t\t\t# $1 = $2 << $3\n",
+		"description": "shift left",
+		"scope": "source.mips"
+	},
+	"srl": {
+		"prefix": "srl",
+		"body": "srl\t\t${1:\\$t0}, ${2:\\$t1}, ${3:0}\t\t\t# $1 = $2 >> $3\n",
+		"description": "shift right",
 		"scope": "source.mips"
 	},
 	"sw": {
