@@ -13,6 +13,10 @@ The extension is based on Textmate's [MIPS bundle](https://github.com/textmate/m
 
 ## Release Notes
 
+### 0.0.8
+
+* Add snippets for `and`, `andi`, `nor`, `or`, `ori`, `sll`, and `srl`
+
 ### 0.0.7
 
 * Add highlighting for `subi`
