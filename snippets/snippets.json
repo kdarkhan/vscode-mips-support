@@ -149,18 +149,6 @@
 		"description": "or immediate",
 		"scope": "source.mips"
 	},
-	"xor": {
-		"prefix": "xor",
-		"body": "xor\t\t${1:\\$t0}, ${2:\\$t1}, ${3:\\$t2}\t\t# $1 = $2 ^ $3\n",
-		"description": "xor",
-		"scope": "source.mips"
-	},
-	"xori": {
-		"prefix": "xori",
-		"body": "xori\t${1:\\$t0}, ${2:\\$t1}, ${3:0}\t\t# $1 = $2 ^ $3\n",
-		"description": "xor immediate",
-		"scope": "source.mips"
-	},
 	"print1": {
 		"prefix": "print",
 		"body": "li\t\t\\$v0, 3\t\t# system call #3 - print double\nla\t\t\\$a0, ${1:variable}\nsyscall\t\t\t\t# execute",
@@ -225,6 +213,18 @@
 		"prefix": "var",
 		"body": "${1:var}: .${2:word} $3",
 		"description": "variable",
+		"scope": "source.mips"
+	},
+	"xor": {
+		"prefix": "xor",
+		"body": "xor\t\t${1:\\$t0}, ${2:\\$t1}, ${3:\\$t2}\t\t# $1 = $2 ^ $3\n",
+		"description": "xor",
+		"scope": "source.mips"
+	},
+	"xori": {
+		"prefix": "xori",
+		"body": "xori\t${1:\\$t0}, ${2:\\$t1}, ${3:0}\t\t\t# $1 = $2 ^ $3\n",
+		"description": "xor immediate",
 		"scope": "source.mips"
 	}
 }
