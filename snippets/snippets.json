@@ -179,16 +179,18 @@
 		"description": "shift left",
 		"scope": "source.mips"
 	},
-  "slt": {
-    "prefix": "slt",
-    "body": "slt\t\t${1:\\$t0}, ${2:\\$s0}, ${3:\\$s1}\t\t# $1 = ($2 < $3) ? 1 : 0",
-    "description": "set on less than"
-  },
-  "slti": {
-    "prefix": "slti",
-    "body": "slti\t${1:\\$t0}, ${2:\\$s0}, ${3:0}\t\t\t# $1 = ($2 < $3) ? 1 : 0",
-    "description": "set on less than immediate"
-  },
+	"slt": {
+		"prefix": "slt",
+		"body": "slt\t\t${1:\\$t0}, ${2:\\$s0}, ${3:\\$s1}\t\t# $1 = ($2 < $3) ? 1 : 0\n",
+		"description": "set on less than",
+		"scope": "source.mips"
+	},
+	"slti": {
+		"prefix": "slti",
+		"body": "slti\t${1:\\$t0}, ${2:\\$s0}, ${3:0}\t\t\t# $1 = ($2 < $3) ? 1 : 0\n",
+		"description": "set on less than immediate",
+		"scope": "source.mips"
+	},
 	"srl": {
 		"prefix": "srl",
 		"body": "srl\t\t${1:\\$t0}, ${2:\\$t1}, ${3:0}\t\t\t# $1 = $2 >> $3\n",
