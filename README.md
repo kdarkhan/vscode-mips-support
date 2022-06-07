@@ -4,8 +4,6 @@ MIPSY Support is a modified version of [vscode-mips-support](https://github.com/
 
 It also contains modified snippets designed to better suit using tab indentation with tab width set to 8 spaces.
 
-The original readme of [vscode-mips-support](https://github.com/kdarkhan/vscode-mips-support) is below:
-
 ## TODO
 - [x] Add syntax highlighting for mipsy-specific instructions
 - [ ] Modify snippets to better suit 8-space tab width indentation
@@ -15,6 +13,8 @@ The original readme of [vscode-mips-support](https://github.com/kdarkhan/vscode-
 - [ ] Add snippets for MIPSY instructions
 - [ ] Add better syntax highlighting for negative numbers
 - [ ] Remove syntax highlighting or add warning for instructions not supported by MIPSY
+
+The original readme of [vscode-mips-support](https://github.com/kdarkhan/vscode-mips-support) is below:
 
 # MIPS Support
 
