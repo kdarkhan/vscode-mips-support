@@ -1,24 +1,24 @@
 {
-    "name": "mips",
-    "displayName": "MIPS Support",
-    "description": "Provides syntax highlighting and snippets for MIPS assembly language",
-    "version": "0.0.9",
-    "publisher": "kdarkhan",
-    "homepage": "https://github.com/kdarkhan/vscode-mips-support",
+    "name": "mipsy",
+    "displayName": "MIPSY Support",
+    "description": "Provides syntax highlighting and snippets for MIPS assembly language, with additional support for instruction from MIPSY (https://github.com/insou22/mipsy). Modified from https://github.com/kdarkhan/vscode-mips-support.",
+    "version": "0.0.1",
+    "publisher": "Bahnschrift",
+    "homepage": "https://github.com/Bahnschrift/vscode-mipsy-support",
     "icon": "images/icon.png",
     "repository": {
         "type": "git",
-        "url": "https://github.com/kdarkhan/vscode-mips-support"
+        "url": "https://github.com/Bahnschrift/vscode-mipsy-support"
     },
     "bugs": {
-        "url": "https://github.com/kdarkhan/vscode-mips-support/issues",
-        "email": "darkhanu@gmail.com"
+        "url": "https://github.com/Bahnschrift/vscode-mipsy-support",
+        "email": "kbeckett@outlook.com.au"
     },
     "engines": {
         "vscode": "^1.5.0"
     },
     "categories": [
-        "Languages",
+        "Programming Languages",
         "Snippets"
     ],
     "contributes": {

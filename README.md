@@ -1,3 +1,11 @@
+# MIPSY Support
+
+MIPSY Support is a modified version of [vscode-mips-support](https://github.com/kdarkhan/vscode-mips-support) by [kdarkhan](https://github.com/kdarkhan) that adds support for the [mipsy](https://github.com/insou22/mipsy)-specific instructions `push`, `pop`, `begin` and `end`.
+
+It also contains modified snippets designed to better suit using tab indentation with tab width set to 8 spaces.
+
+The original readme of [vscode-mips-support](https://github.com/kdarkhan/vscode-mips-support) is below:
+
 # MIPS Support
 
 ## Features
