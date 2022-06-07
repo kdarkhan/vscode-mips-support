@@ -5,6 +5,7 @@ MIPSY Support is a modified version of [vscode-mips-support](https://github.com/
 It also contains modified snippets designed to better suit using tab indentation with tab width set to 8 spaces.
 
 ## TODO
+
 - [x] Add syntax highlighting for mipsy-specific instructions
 - [ ] Modify snippets to better suit 8-space tab width indentation
 - [ ] Fix typos in existing snippets
@@ -19,12 +20,15 @@ The original readme of [vscode-mips-support](https://github.com/kdarkhan/vscode-
 # MIPS Support
 
 ## Features
+
 This VSCode extension provides basic MIPS colorization and snippets support.
 
 ### Colors
+
 ![colors](images/vscode-mips-colors.png)
 
 ### Snippets
+
 ![snippets](images/vscode-mips-snippets.png)
 
 The extension is based on Textmate's [MIPS bundle](https://github.com/textmate/mips.tmbundle)
@@ -33,37 +37,37 @@ The extension is based on Textmate's [MIPS bundle](https://github.com/textmate/m
 
 ### 0.0.9
 
-* Add snippets for `xor`, `xori`, `slt`, and `slti`
+- Add snippets for `xor`, `xori`, `slt`, and `slti`
 
 ### 0.0.8
 
-* Add snippets for `and`, `andi`, `nor`, `or`, `ori`, `sll`, and `srl`
+- Add snippets for `and`, `andi`, `nor`, `or`, `ori`, `sll`, and `srl`
 
 ### 0.0.7
 
-* Add highlighting for `subi`
+- Add highlighting for `subi`
 
 ### 0.0.6
 
-* Syntax highlight $s8 register
+- Syntax highlight $s8 register
 
 ### 0.0.5
 
-* Add TLB related instructions and order/reorder highlighting
+- Add TLB related instructions and order/reorder highlighting
 
 ### 0.0.4
 
-* Fix .globl highlighting
+- Fix `.globl` highlighting
 
 ### 0.0.3
 
-* Add subi instruction
+- Add `subi` instruction
 
 ### 0.0.2
 
-* Add syntax for singly-quoted characters
-* Switch svg logo to png
+- Add syntax for singly-quoted characters
+- Switch `.svg` logo to `.png`
 
 ### 0.0.1
 
-* Initial release
+- Initial release
