@@ -1,7 +1,7 @@
 {
 	"print": {
 		"prefix": "print",
-		"body": "li\t\t\\$v0, 1\t\t# system call #4 - print string\nla\t\t\\$a0, ${1:string}\nsyscall\t\t\t\t# execute",
+		"body": "li\t\t\\$v0, 4\t\t# system call #4 - print string\nla\t\t\\$a0, ${1:string}\nsyscall\t\t\t\t# execute",
 		"description": "print string",
 		"scope": "source.mips"
 	},
