@@ -145,19 +145,19 @@
 	},
 	"printInt": {
 		"prefix": "print",
-		"body": "li\t\t\\$v0, 1\t\t# system call #1 - print int\nla\t\t\\$a0, ${1:variable}\nsyscall\t\t\t\t# execute",
+		"body": "li\t\t\\$v0, 1\t\t# system call #1 - print int\nmove\t\t\\$a0, ${1:variable}\nsyscall\t\t\t\t# execute",
 		"description": "print int",
 		"scope": "source.mips"
 	},
 	"printFloat": {
 		"prefix": "print",
-		"body": "li\t\t\\$v0, 2\t\t# system call #2 - print float\nla\t\t\\$a0, ${1:variable}\nsyscall\t\t\t\t# execute",
+		"body": "li\t\t\\$v0, 2\t\t# system call #2 - print float\nmov.s\t\t\\$f12, ${1:variable}\nsyscall\t\t\t\t# execute",
 		"description": "print float",
 		"scope": "source.mips"
 	},
 	"printDouble": {
 		"prefix": "print",
-		"body": "li\t\t\\$v0, 3\t\t# system call #3 - print double\nla\t\t\\$a0, ${1:variable}\nsyscall\t\t\t\t# execute",
+		"body": "li\t\t\\$v0, 3\t\t# system call #3 - print double\nmov.d\t\t\\$f12, ${1:variable}\nsyscall\t\t\t\t# execute",
 		"description": "print double",
 		"scope": "source.mips"
 	},
