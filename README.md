@@ -13,6 +13,11 @@ The extension is based on Textmate's [MIPS bundle](https://github.com/textmate/m
 
 ## Release Notes
 
+
+### 0.1.0
+
+* `print` snippet fixes
+
 ### 0.0.9
 
 * Add snippets for `xor`, `xori`, `slt`, and `slti`
