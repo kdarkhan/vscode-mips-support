@@ -1,14 +1,20 @@
 {
+	"add": {
+		"prefix": "add",
+		"body": "add\t\t${1:\\$t0}, ${2:\\$t1}, ${3:\\$t2}\t\t# $1 = $2 + $3\n",
+		"description": "add",
+		"scope": "source.mips"
+	},
 	"addi": {
 		"prefix": "addi",
 		"body": "addi\t${1:\\$t0}, ${2:\\$t1}, ${3:0}\t\t\t# $1 = $2 + $3\n",
 		"description": "add immediate",
 		"scope": "source.mips"
 	},
-	"add": {
-		"prefix": "add",
-		"body": "add\t\t${1:\\$t0}, ${2:\\$t1}, ${3:\\$t2}\t\t# $1 = $2 + $3\n",
-		"description": "add",
+	"allocate": {
+		"prefix": "allocateMemory",
+		"body": "# Allocate ${1:16} of bytes in memory\naddi\t\\$a0, \\$0, ${1:16}\t\t# ${1:16} bytes to be allocated\naddi\t\\$v0, \\$0, 9\t\t# system call #9 - allocate memory\nsyscall\t\t\t\t\t# execute",
+		"description": "System call 9: Allocate memory.",
 		"scope": "source.mips"
 	},
 	"and": {
@@ -23,52 +29,82 @@
 		"description": "and immediate",
 		"scope": "source.mips"
 	},
-	"beq": {
-		"prefix": "beq",
-		"body": "beq\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 == $2 then $3\n",
-		"description": "branch if equal",
-		"scope": "source.mips"
-	},
-	"bge": {
-		"prefix": "bge",
-		"body": "bge\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 >= $2 then $3\n",
-		"description": "branch if greater then or equal",
-		"scope": "source.mips"
-	},
-	"bgt": {
-		"prefix": "bgt",
-		"body": "bgt\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 > $2 then $3\n",
-		"description": "branch if greater then",
-		"scope": "source.mips"
-	},
-	"ble": {
-		"prefix": "ble",
-		"body": "ble\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 <= $2 then $3\n",
-		"description": "branch if less then or equal",
-		"scope": "source.mips"
-	},
-	"blt": {
-		"prefix": "blt",
-		"body": "blt\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 < $2 then $3\n",
-		"description": "branch if less then",
-		"scope": "source.mips"
-	},
-	"bne": {
-		"prefix": "bne",
-		"body": "bne\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 != $2 then $3\n",
-		"description": "branch if not equal",
-		"scope": "source.mips"
-	},
 	"b": {
 		"prefix": "b",
 		"body": "b\t\t${1:target}\t\t\t# branch to $1\n",
 		"description": "branch uncodnitional",
 		"scope": "source.mips"
 	},
+	"beq": {
+		"prefix": "beq",
+		"body": "beq\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 == $2 then goto $3\n",
+		"description": "branch if equal",
+		"scope": "source.mips"
+	},
+	"bge": {
+		"prefix": "bge",
+		"body": "bge\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 >= $2 then goto $3\n",
+		"description": "branch if greater then or equal",
+		"scope": "source.mips"
+	},
+	"bgt": {
+		"prefix": "bgt",
+		"body": "bgt\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 > $2 then goto $3\n",
+		"description": "branch if greater then",
+		"scope": "source.mips"
+	},
+	"ble": {
+		"prefix": "ble",
+		"body": "ble\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 <= $2 then goto $3\n",
+		"description": "branch if less then or equal",
+		"scope": "source.mips"
+	},
+	"blt": {
+		"prefix": "blt",
+		"body": "blt\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 < $2 then goto $3\n",
+		"description": "branch if less then",
+		"scope": "source.mips"
+	},
+	"bne": {
+		"prefix": "bne",
+		"body": "bne\t\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 != $2 then goto $3\n",
+		"description": "branch if not equal",
+		"scope": "source.mips"
+	},
 	"div": {
 		"prefix": "div",
-		"body": "div\t\t${1:\\$t0}, ${2:\\$t1}\t\t\t# $1 / $2\nmflo\t${3:\\$t2}\t\t\t\t\t# $3 = floor($1 / $2) \nmfhi\t${4:\\$t3}\t\t\t\t\t# $4 = $1 mod $2 \n",
+		"body": "div\t\t${1:\\$t0}, ${2:\\$t1}\t\t\t# $1 / $2\nmflo\t${3:\\$t2}\t\t\t\t\t# $3 = floor($1 / $2) \nmfhi\t${4:\\$t3}\t\t\t\t\t# $4 = $1 % $2 \n",
 		"description": "divide",
+		"scope": "source.mips"
+	},
+	"exit": {
+		"prefix": "exit",
+		"body": "addi\t\\$v0, \\$0, 10\t\t# System call 10 - Exit\nsyscall\t\t\t\t\t# execute",
+		"description": "System call 10: Exit.",
+		"scope": "source.mips"
+	},
+	"inputDouble": {
+		"prefix": "inputDouble",
+		"body": "addi\t\t\\$v0, \\$0, 6\t\t# system call #6 - input double\nsyscall\t\t\t\t\t\t# execute",
+		"description": "System call 6: Read int",
+		"scope": "source.mips"
+	},
+	"inputFloat": {
+		"prefix": "inputFloat",
+		"body": "addi\t\t\\$v0, \\$0, 7\t\t# system call #7 - input float\nsyscall\t\t\t\t\t\t# execute",
+		"description": "System call 7: Read int",
+		"scope": "source.mips"
+	},
+	"inputInt": {
+		"prefix": "inputInt",
+		"body": "addi\t\t\\$v0, \\$0, 5\t\t# system call #5 - input int\nsyscall\t\t\t\t\t\t# execute",
+		"description": "System call 5: int",
+		"scope": "source.mips"
+	},
+	"inputString": {
+		"prefix": "inputString",
+		"body": "addi\t\t\\$v0, \\$0, 8\t\t# system call #8 - input string\nsyscall\t\t\t\t\t\t# execute",
+		"description": "System call 8: input string",
 		"scope": "source.mips"
 	},
 	"jal": {
@@ -143,28 +179,28 @@
 		"description": "or immediate",
 		"scope": "source.mips"
 	},
-	"printInt": {
+	"printDouble": {
 		"prefix": "print",
-		"body": "li\t\t\\$v0, 1\t\t# system call #1 - print int\nmove\t\t\\$a0, ${1:variable}\nsyscall\t\t\t\t# execute",
-		"description": "print int",
+		"body": "addi\t\t\\$v0, \\$0, 3\t\t# system call #3 - print double\nmov.d\t\t\\$f12, ${1:variable}\nsyscall\t\t\t\t\t\t# execute",
+		"description": "System call 3: print double",
 		"scope": "source.mips"
 	},
 	"printFloat": {
 		"prefix": "print",
-		"body": "li\t\t\\$v0, 2\t\t# system call #2 - print float\nmov.s\t\t\\$f12, ${1:variable}\nsyscall\t\t\t\t# execute",
-		"description": "print float",
+		"body": "addi\t\t\\$v0, \\$0, 2\t\t# system call #2 - print float\nmov.s\t\t\\$f12, ${1:variable}\nsyscall\t\t\t\t\t\t# execute",
+		"description": "System call 2: print float",
 		"scope": "source.mips"
 	},
-	"printDouble": {
+	"printInt": {
 		"prefix": "print",
-		"body": "li\t\t\\$v0, 3\t\t# system call #3 - print double\nmov.d\t\t\\$f12, ${1:variable}\nsyscall\t\t\t\t# execute",
-		"description": "print double",
+		"body": "addi\t\t\\$v0, \\$0, 1\t\t# system call #1 - print int\nadd\t\t\\$a0, \\$0, ${1:variable}\nsyscall\t\t\t\t\t\t# execute",
+		"description": "System call 1: print int",
 		"scope": "source.mips"
 	},
 	"printString": {
 		"prefix": "print",
-		"body": "li\t\t\\$v0, 4\t\t# system call #4 - print string\nla\t\t\\$a0, ${1:string}\nsyscall\t\t\t\t# execute",
-		"description": "print string",
+		"body": "addi\t\t\\$v0, \\$0, 4\t\t# system call #4 - print string\nla\t\t\\$a0, ${1:string}\nsyscall\t\t\t\t\t\t# execute",
+		"description": "System call 4: print string",
 		"scope": "source.mips"
 	},
 	"sb": {
@@ -197,12 +233,6 @@
 		"description": "shift right",
 		"scope": "source.mips"
 	},
-	"sw": {
-		"prefix": "sw",
-		"body": "sw\t\t${1:\\$t1}, ${2:${3:0}(${4:\\$s1})}\t\t# \n",
-		"description": "store word",
-		"scope": "source.mips"
-	},
 	"string": {
 		"prefix": "string",
 		"body": "${1:string}: .asciiz \"$2\"",
@@ -219,6 +249,12 @@
 		"prefix": "subi",
 		"body": "subi\t${1:\\$t0}, ${2:\\$t1}, ${3:0}\t\t\t# $1 = $2 - $3\n",
 		"description": "subtract immediate",
+		"scope": "source.mips"
+	},
+	"sw": {
+		"prefix": "sw",
+		"body": "sw\t\t${1:\\$t1}, ${2:${3:0}(${4:\\$s1})}\t\t# \n",
+		"description": "store word",
 		"scope": "source.mips"
 	},
 	"var": {
