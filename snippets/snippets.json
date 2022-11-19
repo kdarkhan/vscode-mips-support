@@ -180,25 +180,25 @@
 		"scope": "source.mips"
 	},
 	"printDouble": {
-		"prefix": "print",
+		"prefix": "printDouble",
 		"body": "addi\t\t\\$v0, \\$0, 3\t\t# system call #3 - print double\nmov.d\t\t\\$f12, ${1:variable}\nsyscall\t\t\t\t\t\t# execute",
 		"description": "System call 3: print double",
 		"scope": "source.mips"
 	},
 	"printFloat": {
-		"prefix": "print",
+		"prefix": "printFloat",
 		"body": "addi\t\t\\$v0, \\$0, 2\t\t# system call #2 - print float\nmov.s\t\t\\$f12, ${1:variable}\nsyscall\t\t\t\t\t\t# execute",
 		"description": "System call 2: print float",
 		"scope": "source.mips"
 	},
 	"printInt": {
-		"prefix": "print",
+		"prefix": "printInt",
 		"body": "addi\t\t\\$v0, \\$0, 1\t\t# system call #1 - print int\nadd\t\t\\$a0, \\$0, ${1:variable}\nsyscall\t\t\t\t\t\t# execute",
 		"description": "System call 1: print int",
 		"scope": "source.mips"
 	},
 	"printString": {
-		"prefix": "print",
+		"prefix": "printString",
 		"body": "addi\t\t\\$v0, \\$0, 4\t\t# system call #4 - print string\nla\t\t\\$a0, ${1:string}\nsyscall\t\t\t\t\t\t# execute",
 		"description": "System call 4: print string",
 		"scope": "source.mips"
