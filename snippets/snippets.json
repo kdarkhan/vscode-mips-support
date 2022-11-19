@@ -85,20 +85,20 @@
 	},
 	"inputDouble": {
 		"prefix": "inputDouble",
-		"body": "addi\t\t\\$v0, \\$0, 6\t\t# system call #6 - input double\nsyscall\t\t\t\t\t\t# execute",
-		"description": "System call 6: Read int",
+		"body": "addi\t\t\\$v0, \\$0, 7\t\t# system call #7 - input double\nsyscall\t\t\t\t\t\t# execute",
+		"description": "System call 7: Read Double",
 		"scope": "source.mips"
 	},
 	"inputFloat": {
 		"prefix": "inputFloat",
-		"body": "addi\t\t\\$v0, \\$0, 7\t\t# system call #7 - input float\nsyscall\t\t\t\t\t\t# execute",
-		"description": "System call 7: Read int",
+		"body": "addi\t\t\\$v0, \\$0, 6\t\t# system call #6 - input float\nsyscall\t\t\t\t\t\t# execute",
+		"description": "System call 6: Read float",
 		"scope": "source.mips"
 	},
 	"inputInt": {
 		"prefix": "inputInt",
 		"body": "addi\t\t\\$v0, \\$0, 5\t\t# system call #5 - input int\nsyscall\t\t\t\t\t\t# execute",
-		"description": "System call 5: int",
+		"description": "System call 5: Read int",
 		"scope": "source.mips"
 	},
 	"inputString": {
