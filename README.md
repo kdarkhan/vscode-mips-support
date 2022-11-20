@@ -13,6 +13,10 @@ The extension is based on Textmate's [MIPS bundle](https://github.com/textmate/m
 
 ## Release Notes
 
+### 0.1.1
+
+* Add `exit` and `allocate` syscalls
+* Adjust prefixes for `print` snippets
 
 ### 0.1.0
 
