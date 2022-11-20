@@ -32,7 +32,7 @@
 	"b": {
 		"prefix": "b",
 		"body": "b\t\t${1:target}\t\t\t# branch to $1\n",
-		"description": "branch uncodnitional",
+		"description": "branch unconditional",
 		"scope": "source.mips"
 	},
 	"beq": {
