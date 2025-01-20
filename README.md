@@ -13,6 +13,10 @@ The extension is based on Textmate's [MIPS bundle](https://github.com/textmate/m
 
 ## Release Notes
 
+### 0.1.2
+
+* Add snippets for `rem` and `remu`
+
 ### 0.1.1
 
 * Add `exit` and `allocate` syscalls
