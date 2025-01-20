@@ -203,6 +203,18 @@
 		"description": "System call 4: print string",
 		"scope": "source.mips"
 	},
+  "rem": {
+    "prefix": "rem",
+    "body": "rem\t\t${1:\\$t0}, ${2:\\$t1}, ${3:\\$t2}\t\t\t# $1 = $2 % $3\n",
+    "description": "remainder",
+    "scope": "source.mips"
+  },
+  "remu": {
+    "prefix": "remu",
+    "body": "remu\t\t${1:\\$t0}, ${2:\\$t1}, ${3:\\$t2}\t\t\t# $1 = $2 % $3\n",
+    "description": "remainder unsigned",
+    "scope": "source.mips"
+  },
 	"sb": {
 		"prefix": "sb",
 		"body": "sb\t\t${1:\\$t1}, ${2:${3:0}(${4:\\$s1})}\t\t# \n",
